@@ -8,13 +8,13 @@
 <body>
     
     <form for="Formulario" name="Formulario" title="Formulario" id="formulario">
-        <h1 for="Titulo" name="Titulo" title="Titulo" id="Titulo">TITULO</h1>
+        <h1 for="Titulo" name="Titulo" title="Titulo" id="Titulo">FORMULARIO</h1>
         <fieldset for="fieldset1" name="fieldset1" title="fieldset1" id="filset1">
             <legend for="leyenda1" name="leyenda1" title="leyenda1" id="leyenda1">Datos Personales</legend>
                 <label id="Prefijo" name="Prefijo" for="Prefijo" title="Prefijo">Prefijo</label>
-                <input id="Input-Prefijo" name="Input-Prefijo" for="Input-Prefijo" type="text" title="Input-Prefijo" autofocus autocomplete="honorific-prefix" required>
+                <input id="Input-Prefijo" name="Input-Prefijo" for="Input-Prefijo" type="text" title="Input-Prefijo" autofocus autocomplete="honorific-prefix">
                 <label id="Nombre" name="Nombre" for="Nombre" title="Nombre">Nombre</label>
-                <input id="Input-Nombre" name="Input-Nombre" for="Input-Nombre" type="text" title="Input-Nombre">
+                <input id="Input-Nombre" name="Input-Nombre" for="Input-Nombre" type="text" title="Input-Nombre" required>
                 <label id="Apellidos" name="Apellidos" for="Apellidos" title="Apellidos">Apellidos</label>
                 <input id="Input-Apellidos" name="Input-Apellidos" for="Input-Apellidos" type="text" title="Input-Apellidos" required>
                 <label id="Email" name="Email" for="Email" title="Email">Email</label>
@@ -24,7 +24,7 @@
                 <label id="Fecha de nacimiento" name="Fecha de nacimiento" for="Fecha de nacimiento" title="Fecha de nacimiento">Fecha de nacimiento</label>
                 <input id="Input-Fecha de nacimiento" name="Input-Fecha de nacimiento" for="Input-Fecha de nacimiento" type="date" title="Input-Fecha de nacimiento" required>
                 <label id="Edad" name="Edad" for="Edad" title="Edad">Edad</label>
-                <input id="Input-Edad" name="Input-Edad" for="Input-Edad" type="number" title="Input-Edad" min="16" max="130">
+                <input id="Input-Edad" name="Input-Edad" for="Input-Edad" type="number" title="Input-Edad" min="16" max="130" onclick="comprobarEdad()">
         </fieldset>
         <fieldset for="fieldset2" name="fieldset2" title="fieldset2" id="filset2">
                 <legend for="leyenda2" name="leyenda2" title="leyenda2" id="leyenda2">Datos Adicionales</legend>
@@ -33,9 +33,9 @@
                 <label id="Inicio de estudios" name="Inicio de estudios" for="Inicio de estudios" title="Inicio de estudios">Inicio de estudios</label>
                 <input id="Input-Inicio de estudios" name="Input-Inicio de estudios" for="Input-Inicio de estudios" type="datetime" title="Input-Inicio de estudios" max="2022">
                 <label id="Pagina web" name="Pagina web" for="Pagina web" title="Pagina web">Pagina web</label>
-                <input id="Input-Pagina web" name="Input-Pagina web" for="Input-Pagina web" type="url" title="Input-Pagina web" pattern="(https:)[/][/](www.[a-z]+[.][a-z]{3})">
-                <label id="Curso actual" name="Curso actual" for="Curso actual" title="Curso actual">Curso actual</label>
-                <input id="Input-Curso actual" name="Input-Curso actual" for="Input-Curso actual" type="text" title="Input-Curso actual" pattern="[0-9]{4}[/][0-9]{4}">
+                <input id="Input-Pagina web" name="Input-Pagina web" for="Input-Pagina web" type="url" title="Input-Pagina web" pattern="(https:)[/][/](www.[a-z]+[.][a-z]{3})" onchange="comprobarWeb(id)">
+                <label id="Cursoactual" name="Curso actual" for="Curso actual" title="Curso actual">Curso actual</label>
+                <input id="Input-Curso actual" name="Input-Curso actual" for="Input-Curso actual" type="text" title="Input-Curso actual" pattern="[0-9]{4}[/][0-9]{4}" onchange="comprobarCurso(id)">
                 <label id="Nivel de satisfaccion" name="Nivel de satisfaccion" for="Nivel de satisfaccion" title="Nivel de satisfaccion">Nivel de satisfaccion</label>
                 <input id="Input-Nivel de satisfaccion" name="Input-Nivel de satisfaccion" for="Input-Nivel de satisfaccion" type="range" title="Input-Nivel de satisfaccion" min="0" max="10" step="0.5">
         </fieldset>
@@ -51,10 +51,92 @@
     </form>
 
     <style>
+        html{
+            background-color: antiquewhite;
+        }
+
+        form{
+            color: firebrick;
+        }
+
+        #Input-color{
+            margin-bottom: 12px;
+        }
+
         label{
             display: block;
         }
+
+        input:required{
+            border-color: black;
+        }
+
+        input:valid::after{
+            content: "✔️";
+        }
+
+        input:invalid::after{
+            content: "❌";
+        }
+
+        input{
+            border-color: gray;
+        }
+
+        input:focus{
+            border: 3px solid blue;
+        }
+
+        legend{
+            color: darkred;
+        }
+
+        fieldset{
+            width: 400px;
+            border-style:dashed;
+            border-color: slateblue;
+        }
     </style>
+
+    <script>
+       function comprobarEdad(){
+        let numero = document.getElementById("Input-Edad").value;
+
+        if (numero > 15 && numero <131 ){
+            document.getElementById("Input-Edad").style.backgroundColor = "green"; 
+
+        } else {
+            document.getElementById("Input-Edad").style.backgroundColor = "red"; 
+        }
+       }
+
+       function comprobarCurso(id){
+
+        let valor = document.getElementById(id).value;
+        const validacion = /^[0-9]{4}[/][0-9]{4}$/;
+
+        if (validacion.test(valor)){
+
+            document.getElementById("Cursoactual").innerHTML = "Curso Actual ✔️";
+        } else {
+            document.getElementById("Cursoactual").innerHTML = "Curso Actual ❌";
+        }
+       }
+
+       function comprobarWeb(id){
+
+        let valor = document.getElementById(id).value;
+        const validacion = /^(https:)[/][/](www.[a-z]+[.][a-z]{3})$/;
+
+        if (validacion.test(valor)){
+
+        document.getElementById("Pagina web").innerHTML = "Pagina web ✔️";
+        } else {
+        document.getElementById("Pagina web").innerHTML = "Pagina web ❌";
+        }
+        }
+
+    </script>
     
 </body>
 </html>
