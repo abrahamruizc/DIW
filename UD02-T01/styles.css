@@ -1,0 +1,26 @@
+/*-----------------------------------------------------
+Project: Formularios Webs y Validaciones CSS
+Version: 1.0
+Last change: 25..2022
+Assigned to: Abraham Ruiz Carmona
+
+[TABLA DE CONTENIDOS]
+1.HTML
+2.HEADER
+
+-----------------------------------------------------*/
+
+/*HTML*/
+html{
+    background-color:cornsilk;
+}
+
+/*HEADER*/
+ul{
+    display: flex;
+    list-style: none;
+}
+
+li{
+    margin-right: 100px;
+}
