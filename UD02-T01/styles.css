@@ -1,26 +1,118 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap');
 /*-----------------------------------------------------
 Project: Formularios Webs y Validaciones CSS
 Version: 1.0
-Last change: 25..2022
+Last change: 25/11/2022
 Assigned to: Abraham Ruiz Carmona
 
 [TABLA DE CONTENIDOS]
-1.HTML
-2.HEADER
+1.HEADER
+2.BODY
+
+[CÓDIGOS DE COLOR]
+
+default black;
+
+[FUENTES Y TIPOGRAFÍAS]
+
+BODY: sans-serif
+h1 y h2: Roboto Condensed(importado)
 
 -----------------------------------------------------*/
+/*añadimos a todo el documento las propiedades conjuntas*/
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+/*HEADER*/
 
-/*HTML*/
-html{
-    background-color:cornsilk;
+nav{
+    text-align: center;
+    background-color:darksalmon;
+    padding: 1.5em;
 }
 
-/*HEADER*/
-ul{
-    display: flex;
+nav ul{
     list-style: none;
+    display: inline-block;
+}
+
+nav ul li{
+    float: right;
+}
+
+nav ul li::after{
+    content: "🔷";
+    
 }
 
 li{
-    margin-right: 100px;
+    margin-right: 70px;
+}
+
+#a1{
+    color:black;
+}
+
+#a1:visited{
+    color:darkblue;
+}
+
+#a2{
+    color:aqua;
+}
+
+#a2:visited{
+    color:darkblue;
+}
+
+#a3{
+    color:steelblue;
+}
+
+#a3:visited{
+    color:darkblue;
+}
+
+#a4{
+    color:darkgoldenrod;
+}
+
+#a4:visited{
+    color:darkblue;
+}
+
+/*BODY*/
+body{
+    margin: 0;
+    background-color: cornsilk;
+    position: relative;
+    padding-bottom: 2em;
+    min-height: 100vh;
+}
+
+
+h1,h2{
+    color: green;
+    margin-top: 50px;
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center
+}
+
+
+
+
+/*FOOTER*/
+
+footer{
+    
+    background-color:lightslategray;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 2em;
 }

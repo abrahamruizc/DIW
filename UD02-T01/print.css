@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import url("styles.css");
+/*-----------------------------------------------------
+Project: Formularios Webs y Validaciones CSS
+Version: 1.0
+Last change: 25/11/2022
+Assigned to: Abraham Ruiz Carmona
+
+[TABLA DE CONTENIDOS]
+1.MEDIA
+
+[CÓDIGOS DE COLOR]
+
+h1 y h2 blue(Imprimir)
+
+-----------------------------------------------------*/
+
+/*MEDIA*/
+/*Reglas al imprimir*/
+@media print {
+    h1,h2{
+        color:  blue;
+    }
+
+    #mobil{
+        display: none;
+        
+    }
+}
+
