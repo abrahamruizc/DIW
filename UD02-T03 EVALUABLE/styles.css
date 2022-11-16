@@ -2,15 +2,19 @@ body{
     margin: 0;
     display: grid;
     grid-template-columns: 4fr 2fr;
-    grid-template-rows: 100px 50px 860px 50px;
-    min-height: 100vh;
-    /* grid-gap: 10px; */
     background-color: rgb(230, 230, 230);
 }
 
 header {
     grid-column: 1/3;
     grid-row: 1;
+    text-align: center;
+}
+
+#logo{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 15%;
 }
 
 .principal{
@@ -18,59 +22,48 @@ header {
 }
 
 
-
 nav {
     display: flex;
     justify-content: center;
     grid-column: 1/3;
     grid-row: 2;
-    
     background-color: rgb(127, 139, 192);
     color: rgb(18, 42, 109);
 }
 
-input{
-    background-color: rgb(219, 245, 245);
-    border-color:rgb(219, 245, 245);
+li{
+    list-style: none;
 }
 
 ul{
-
+    width: 100%;
+    display: flex;
+    justify-content:center;
 }
 
-li{
-    display: inline;
-    margin-left: 100px;
+li:nth-of-type(4),li:first-child{
+    margin-left: auto;
 }
 
 article {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     grid-gap: 10px;
-    grid-column: 1/2;
-    grid-row: 3;
-    border-color:aqua;
-    border-width: 2px;
-    border-style: solid;
     background-color: aliceblue;
-    
 }
 
 section {
-    flex: 40px;
-    border-color:violet;
-    border-width: 2px;
-    border-style: solid;
-
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 3;
+    flex-direction: column;
 }
 
 
-#div{
+.div{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
     grid-column: 2/3;
     grid-row: 3;
     border-color: yellow;
@@ -81,7 +74,7 @@ section {
 
 aside{
     width: 300px;
-    flex: 100px;
+    height: 100%;
     border-color: aqua;
     border-width: 2px;
     border-style: solid; 
@@ -89,13 +82,31 @@ aside{
 
 
 
-
 footer{
     grid-column: 1/3;
     grid-row: 4;
-    grid-template-rows: 10px;
-    border-color: yellow;
+    height: 100%;
 }
 
 
+@media screen and (min-width: 376px) and (max-width: 666px) {
 
+    section {
+        grid-column: 1 / 3;
+        grid-row: 3;
+        padding: 1%;
+    }
+
+    .div {
+        grid-column: 1 / 3;
+        grid-row: 4;
+        padding: 1%;
+    }
+
+    footer {
+        grid-column: 1 / 3;
+        grid-row: 5;
+        padding: 1%;
+    }
+    
+}
