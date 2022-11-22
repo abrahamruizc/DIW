@@ -160,4 +160,352 @@ h6 {
 
 /*
 * DIW: DIW: FIN Parte 3. 
+*/
+/*
+* DIW: Parte 4: 
+* Usar bucles y variables para autocalcular valores dinámicos
+* Usar anidamiento.
+*  
+*/
+@media (min-width: 601px) {
+  .w3-col.m1 {
+    width: 8.33333%;
+  }
+  .w3-col.m2 {
+    font-size: 16.66666%;
+  }
+  .w3-col.m3 {
+    font-size: 24.99999%;
+  }
+  .w3-quarter {
+    font-size: 24.99999%;
+  }
+  .w3-col.m4 {
+    font-size: 33.33332%;
+  }
+  .w3-quarter {
+    font-size: 33.33332%;
+  }
+  .w3-col.m5 {
+    font-size: 41.66665%;
+  }
+  .w3-col.m6 {
+    font-size: 49.99998%;
+  }
+  .w3-half {
+    font-size: 49.99998%;
+  }
+  .w3-col.m7 {
+    font-size: 58.33331%;
+  }
+  .w3-col.m8 {
+    font-size: 66.66664%;
+  }
+  .w3-twothird {
+    font-size: 66.66664%;
+  }
+  .w3-col.m9 {
+    font-size: 74.99997%;
+  }
+  .w3-threequarter {
+    font-size: 74.99997%;
+  }
+  .w3-col.m10 {
+    font-size: 83.3333%;
+  }
+  .w3-col.m11 {
+    font-size: 91.66663%;
+  }
+  .w3-col.m12 {
+    font-size: 99.99996%;
+  }
+}
+@media (min-width: 993px) {
+  .w3-col.l1 {
+    width: 8.33333%;
+  }
+  .w3-col.l2 {
+    font-size: 16.66666%;
+  }
+  .w3-col.l3 {
+    font-size: 24.99999%;
+  }
+  .w3-col.l4 {
+    font-size: 33.33332%;
+  }
+  .w3-col.l5 {
+    font-size: 41.66665%;
+  }
+  .w3-col.l6 {
+    font-size: 49.99998%;
+  }
+  .w3-col.l7 {
+    font-size: 58.33331%;
+  }
+  .w3-col.l8 {
+    font-size: 66.66664%;
+  }
+  .w3-col.l9 {
+    font-size: 74.99997%;
+  }
+  .w3-col.l10 {
+    font-size: 83.3333%;
+  }
+  .w3-col.l11 {
+    font-size: 91.66663%;
+  }
+  .w3-col.l12 {
+    font-size: 99.99996%;
+  }
+}
+/*
+* DIW: DIW: FIN Parte 4. 
+*/
+/*
+* DIW: Parte 6: 
+* Crea una clase que se llame .w3-display con position: absolute y con @extend crea una especialización de cada una de las siguientes
+* Utiliza un mixin para no repetir left:0 y top:0 en todos los display donde sea requerido.
+*/
+.w3-display, .w3-display-bottommiddle, .w3-display-topmiddle, .w3-display-right, .w3-display-left, .w3-display-middle, .w3-display-bottomright, .w3-display-bottomleft, .w3-display-topright, .w3-display-topleft {
+  position: absolute;
+}
+
+.w3-display-topleft {
+  top: 0;
+  left: 0;
+}
+
+.w3-display-topright {
+  right: 0;
+  top: 0;
+}
+
+.w3-display-bottomleft {
+  left: 0;
+  bottom: 0;
+}
+
+.w3-display-bottomright {
+  right: 0;
+  bottom: 0;
+}
+
+.w3-display-middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.w3-display-left {
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+}
+
+.w3-display-right {
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+}
+
+.w3-display-topmiddle {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+}
+
+.w3-display-bottommiddle {
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+}
+
+/*
+* DIW: Fin parte 6
+*/
+/*
+* DIW: Parte 7: 
+* Utilizar anidamiento para el .w3-animate
+*/
+.w3-animate-fading {
+  -webkit-animation: fading 10s infinite;
+          animation: fading 10s infinite;
+}
+.w3-animate-opacity {
+  -webkit-animation: opac 0.8s;
+          animation: opac 0.8s;
+}
+.w3-animate-top {
+  position: relative;
+  -webkit-animation: animatetop 0.4s;
+          animation: animatetop 0.4s;
+}
+.w3-animate-left {
+  position: relative;
+  -webkit-animation: animateleft 0.4s;
+          animation: animateleft 0.4s;
+}
+.w3-animate-right {
+  position: relative;
+  -webkit-animation: animateright 0.4s;
+          animation: animateright 0.4s;
+}
+.w3-animate-bottom {
+  position: relative;
+  -webkit-animation: animatebottom 0.4s;
+          animation: animatebottom 0.4s;
+}
+.w3-animate-zoom {
+  -webkit-animation: animatezoom 0.6s;
+          animation: animatezoom 0.6s;
+}
+.w3-animate-input {
+  transition: width 0.4s ease-in-out;
+}
+.w3-animate-input :focus {
+  width: 100% !important;
+}
+
+@-webkit-keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/*
+* DIW: Fin de la Parte 7
 *//*# sourceMappingURL=styles.css.map */

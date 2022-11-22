@@ -1,0 +1,8 @@
+@mixin topleft ($top, $left) {
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute {
+    position: absolute;
+}
