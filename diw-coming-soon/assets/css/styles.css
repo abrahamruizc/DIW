@@ -36,20 +36,49 @@ h6 {
 * DIW: Parte 2: 
 * Usar anidamientos de la forma más optima posible
 */
-.w3-table,
-.w3-table-all {
+.w3-table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
   display: table;
 }
-
-.w3-table-all {
-  border: 1px solid #ccc;
+.w3-table td {
+  padding: 8px 8px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+}
+.w3-table td:first-child {
+  padding-left: 16px;
+}
+.w3-table th {
+  padding: 8px 8px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+}
+.w3-table th:first-child {
+  padding-left: 16px;
 }
 
-.w3-bordered tr,
+.w3-table-all {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
+}
 .w3-table-all tr {
+  border-bottom: 1px solid #ddd;
+}
+.w3-table-all tr:nth-child(odd) {
+  background-color: #fff;
+}
+.w3-table-all tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.w3-bordered tr {
   border-bottom: 1px solid #ddd;
 }
 
@@ -57,41 +86,78 @@ h6 {
   background-color: #f1f1f1;
 }
 
-.w3-table-all tr:nth-child(odd) {
-  background-color: #fff;
+.w3-hoverable tbody tr:hover {
+  background-color: #ccc;
 }
 
-.w3-table-all tr:nth-child(even) {
-  background-color: #f1f1f1;
-}
-
-.w3-hoverable tbody tr:hover,
 .w3-ul.w3-hoverable li:hover {
   background-color: #ccc;
 }
 
-.w3-centered tr th,
+.w3-centered tr th {
+  text-align: center;
+}
 .w3-centered tr td {
   text-align: center;
 }
 
-.w3-table td,
-.w3-table th,
-.w3-table-all td,
-.w3-table-all th {
-  padding: 8px 8px;
-  display: table-cell;
-  text-align: left;
-  vertical-align: top;
+/*
+* DIW: DIW: FIN Parte 2. 
+*/
+/*
+* DIW: Parte 3: 
+* Usar una variable para establecer el valor inicial de s1 
+* Crear los siguientes h restando multiplicando por 2 cada uno.
+* Utilizar un bucle para crear los s1 de forma automática
+*/
+.w3-col.s1 {
+  width: 8.33333%;
 }
 
-.w3-table th:first-child,
-.w3-table td:first-child,
-.w3-table-all th:first-child,
-.w3-table-all td:first-child {
-  padding-left: 16px;
+.w3-col.s2 {
+  font-size: 16.66666%;
+}
+
+.w3-col.s3 {
+  font-size: 24.99999%;
+}
+
+.w3-col.s4 {
+  font-size: 33.33332%;
+}
+
+.w3-col.s5 {
+  font-size: 41.66665%;
+}
+
+.w3-col.s6 {
+  font-size: 49.99998%;
+}
+
+.w3-col.s7 {
+  font-size: 58.33331%;
+}
+
+.w3-col.s8 {
+  font-size: 66.66664%;
+}
+
+.w3-col.s9 {
+  font-size: 74.99997%;
+}
+
+.w3-col.s10 {
+  font-size: 83.3333%;
+}
+
+.w3-col.s11 {
+  font-size: 91.66663%;
+}
+
+.w3-col.s12 {
+  font-size: 99.99996%;
 }
 
 /*
-* DIW: DIW: FIN Parte 2. 
+* DIW: DIW: FIN Parte 3. 
 *//*# sourceMappingURL=styles.css.map */
