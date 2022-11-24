@@ -389,30 +389,77 @@
 * DIW: Parte 8: 
 * Utilizar variables para ir incrementando de forma dinámica el font-size
 */
-.w3-tiny {
-  font-size: 10px !important;
-}
-.w3-small {
-  font-size: 12px !important;
-}
-.w3-medium {
-  font-size: 15px !important;
-}
-.w3-large {
-  font-size: 18px !important;
-}
-.w3-xlarge {
-  font-size: 24px !important;
-}
-.w3-xxlarge {
-  font-size: 36px !important;
-}
-.w3-xxxlarge {
-  font-size: 48px !important;
-}
-.w3-jumbo {
-  font-size: 64px !important;
+.w3{
+  &-tiny{
+    font-size: variables.$tiny;
+  }
+
+  &-small{
+    font-size: variables.$small;
+  }
+
+  &-medium{
+    font-size: variables.$medium;
+  }
+
+  &-large{
+    font-size: variables.$large;
+  }
+
+  &-xlarge{
+    font-size: variables.$xlarge;
+  }
+
+  &-xxlarge{
+    font-size: variables.$xxlarge;
+  }
+
+  &-xxxlarge{
+    font-size: variables.$xxxlarge;
+  }
+
+  &-jumbo{
+    font-size: variables.$jumbo;
+  }
 }
 /*
 * DIW: Fin Parte 8 
+*/
+
+/*
+* DIW: Parte 9: 
+* Utilizar un mixin con los elementos repetidos entre todos los border 
+* para que no se repita el código
+*/
+
+
+.w3-border {
+  @include mixins.border(border,1px);
+}
+.w3-border-top {
+  @include mixins.border(top,1px);
+}
+.w3-border-bottom {
+  @include mixins.border(bottom,1px);
+}
+.w3-border-left {
+  @include mixins.border(left,1px);
+}
+.w3-border-right {
+  @include mixins.border(right,1px);
+}
+.w3-topbar {
+  @include mixins.border(top,6px);
+}
+.w3-bottombar {
+  @include mixins.border(bottom,6px);
+}
+.w3-leftbar {
+  @include mixins.border(left,6px);
+}
+.w3-rightbar {
+  @include mixins.border(right,6px);
+}
+/*
+* DIW: Final Parte 9 
 */

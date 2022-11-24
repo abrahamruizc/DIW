@@ -6,3 +6,17 @@
 @mixin absolute {
     position: absolute;
 }
+
+@mixin border($tipo,$pixeles) {
+    @if $tipo == border {
+        border: $pixeles solid #ccc !important;
+    } @else if $tipo == top {
+        border-top: $pixeles solid #ccc !important;
+    } @else if $tipo == bottom {
+        border-bottom: $pixeles solid #ccc !important;
+    } @else if $tipo == left {
+        border-left: $pixeles solid #ccc !important;
+    } @else if $tipo == right {
+        border-right: $pixeles solid #ccc !important;
+    }
+}
