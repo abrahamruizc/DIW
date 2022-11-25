@@ -1338,26 +1338,42 @@ a {
 * Utiliza mixins y variables para no repetir los colores !important
 * Usa también anidamiento para los pseudoelementos
 */
+.w3{
+  &-amber{
+    @include mixins.color(variables.$negro,variables.$amarillo);
+  }
+  &-hover-amber{
+    :hover{
+      @extend .w3-amber;
+    }
+  }
 
-.w3-amber,
-.w3-hover-amber:hover {
-  color: #000 !important;
-  background-color: #ffc107 !important;
-}
-.w3-aqua,
-.w3-hover-aqua:hover {
-  color: #000 !important;
-  background-color: #00ffff !important;
-}
-.w3-blue,
-.w3-hover-blue:hover {
-  color: #fff !important;
-  background-color: #2196f3 !important;
-}
-.w3-light-blue,
-.w3-hover-light-blue:hover {
-  color: #000 !important;
-  background-color: #87ceeb !important;
+  &-aqua{
+    @include mixins.color(variables.$negro,variables.$azul);
+  }
+  &-hover-aqua{
+    :hover{
+      @extend .w3-aqua;
+    }
+  }
+
+  &-blue{
+    @include mixins.color(variables.$blanco,variables.$mar);
+  }
+  &-hover-blue{
+    :hover{
+      @extend .w3-blue;
+    }
+  }
+
+  &-light-blue{
+    @include mixins.color(variables.$negro,variables.$claro);
+  }
+  &-hover-light-blue{
+    :hover{
+      @extend .w3-light-blue;
+    }
+  }
 }
 /*
 * DIW: Final Parte 12

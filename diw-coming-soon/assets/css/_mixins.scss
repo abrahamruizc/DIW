@@ -20,3 +20,8 @@
         border-right: $pixeles solid #ccc !important;
     }
 }
+
+@mixin color($color1, $color2){
+    color: $color1 !important;
+    background-color: $color2 !important;
+}

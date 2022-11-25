@@ -1621,30 +1621,22 @@ a {
 * Utiliza mixins y variables para no repetir los colores !important
 * Usa también anidamiento para los pseudoelementos
 */
-.w3-amber,
-.w3-hover-amber:hover {
+.w3-amber, .w3-hover-amber :hover {
   color: #000 !important;
   background-color: #ffc107 !important;
 }
-
-.w3-aqua,
-.w3-hover-aqua:hover {
+.w3-aqua, .w3-hover-aqua :hover {
   color: #000 !important;
   background-color: #00ffff !important;
 }
-
-.w3-blue,
-.w3-hover-blue:hover {
+.w3-blue, .w3-hover-blue :hover {
   color: #fff !important;
   background-color: #2196f3 !important;
 }
-
-.w3-light-blue,
-.w3-hover-light-blue:hover {
+.w3-light-blue, .w3-hover-light-blue :hover {
   color: #000 !important;
   background-color: #87ceeb !important;
 }
-
 /*
 * DIW: Final Parte 12
 */
