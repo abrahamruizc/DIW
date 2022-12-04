@@ -1,0 +1,161 @@
+/*-----------------------------------------------------
+Project: UD02-T03 EVALUABLE - LAYOUT RESPONSIVE
+Version: 1.0
+Last change: 17/11/2022
+Assigned to: Abraham Ruiz Carmona
+
+[TABLA DE CONTENIDOS]
+1.BODY
+2.HEADER
+3.NAV
+4.ARTICLE Y SECTION
+5.DIV Y ASIDE
+6.FOOTER
+7.MEDIA SCREEN
+
+
+[CÓDIGOS DE COLOR]
+
+default black;
+
+-----------------------------------------------------*/
+
+/*1.BODY*/
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    background-color: rgb(230, 230, 230);
+}
+
+/*2.HEADER*/
+header {
+    width: 100%;
+    grid-column: 1/3;
+    grid-row: 1;
+    text-align: center;
+}
+
+#logo{
+    width: 15%;
+}
+
+.principal{
+    background-color: rgb(55, 70, 170);
+    border: solid 1px black;
+}
+
+.secundario{
+    background-color: rgb(167, 214, 126);
+}
+
+/*3.NAV*/
+nav {
+    display: flex;
+    justify-content: center;
+    grid-column: 1/3;
+    grid-row: 2;
+    background-color: rgb(127, 139, 192);
+    color: rgb(18, 42, 109);
+    border: solid 1px black;
+}
+
+ul{
+    width: 100%;
+    display: flex;
+}
+
+li{
+    list-style: none;
+}
+
+#menu{
+    margin-right: 15%;
+
+}
+
+#log{
+    margin-left: 3%;
+    margin-right: 1%;
+}
+
+li:nth-of-type(4),li:first-child{
+    margin-left: auto;
+}
+
+
+/*4.ARTICLE Y SECTION*/
+article {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+section {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 3;
+    background-color: rgb(213, 243, 186);
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    width:102%;
+}
+
+/*5.DIV Y ASIDE*/
+.div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 3;
+    background-color: rgb(226, 209, 132);
+    border-color: black;
+    border-width: 1px;
+    border-style: solid; 
+}
+
+
+aside{
+    width: 300px;
+    
+}
+
+
+/*6.FOOTER*/
+footer{
+    text-align: center;
+    grid-column: 1/3;
+    grid-row: 4;
+    height: 100%;
+}
+
+/*7.MEDIA SCREEN*/
+@media screen and (min-width: 376px) and (max-width: 666px) {
+
+
+    section {
+        grid-column: 1 / 3;
+        grid-row: 3;
+        padding: 1%;
+    }
+
+    /*desplazamos el div a la nueva fila 4 (donde antes se encontraba el footer)*/
+    .div {
+        grid-column: 1 / 3;
+        grid-row: 4;
+        padding: 1%;
+    }
+
+    /*aqui asignamos el footer en una nueva fila*/
+
+    footer {
+        grid-column: 1 / 3;
+        grid-row: 5;
+        padding: 1%;
+    }
+    
+}
