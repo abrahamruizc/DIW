@@ -105,6 +105,11 @@ img{
     width:102%;
 }
 
+span{
+    background-color: rgb(193, 250, 193);
+    align-self: flex-end;
+}
+
 /*5.DIV Y ASIDE*/
 .div{
     display: flex;
