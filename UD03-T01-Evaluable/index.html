@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script defer src="js/script.js"></script>
     <title>LAYOUT RESPONSIVE</title>
 </head>
 
 <body>
-    <header class="principal"><img id="logo" src="logo.svg"></header>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="video/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+        <h2 id="h">Unete a nuestro grupo</h2>
+        <button id="myBtn" onclick="Cerrar()">Cerrar</button>
+    </div>
+
+
+    <header class="principal"><img id="logo" src="images/logo.svg"></header>
 
     <nav>
         <ul>
-            <li id="menu"><a>Inicio</a></li>
-            <li id="menu"><a>Eventos</a></li>
-            <li id="menu"><a>Clasificaciones</a></li>
-            <li id="log"><a>Login</a></li>
-            <li id="log"><a>Registro</a></li>
+            <li id="menu"><img id="menuicon" src="images/link.svg"><a> Inicio</a></li>
+            <li id="menu"><img id="menuicon" src="images/link.svg"><a> Eventos</a></li>
+            <li id="menu"><img id="menuicon" src="images/link.svg"><a> Clasificaciones</a></li>
+            <li id="log"><img id="menuicon" src="images/login.svg"><a> Login</a></li>
+            <li id="log"><img id="menuicon" src="images/register.svg"><a> Registro</a></li>
         </ul>
     </nav>
 
@@ -28,7 +40,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id minus veritatis molestiae architecto sunt dolorum delectus totam quidem corporis labore a quas commodi est culpa quaerat maiores pariatur, ipsa asperiores?
             </section>
             <section id="section">
-                <img src="mujer.jpg"><span>Pixabay License</span>
+                <img src="images/mujer.jpg"><span><img id="menuicon" src="images/image-regular.svg"> Pixabay License</span>
             </section>
             <footer>10/11/2020</footer>
         </article>
@@ -38,7 +50,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id minus veritatis molestiae architecto sunt dolorum delectus totam quidem corporis labore a quas commodi est culpa quaerat maiores pariatur, ipsa asperiores?
             </section>
             <section id="section">
-                <img src="carretera.jpg"><span>Pixabay License</span>
+                <img src="images/carretera.jpg"><span><img id="menuicon" src="images/image-regular.svg"> Pixabay License</span>
             </section>
             <footer>10/12/2020</footer>
         </article>
@@ -46,7 +58,7 @@
     <div class="div">
         <aside>
             <h1>Bienvenido a tu espacio de deportes</h1>
-            <img id="banner" src="banner.png">
+            <img id="banner" src="images/banner.png">
         </aside>
         <aside>
             <h1>Sobre nosotros:</h1>
@@ -54,9 +66,11 @@
             weRunning surgió del amor de cinco compañeros por el deporte, y de la necesidad de compartir un sentimiento y llevarlo más allá de cualquier frontera. Desde el día en que surgió, hemos llevado el running a todos los rincones de España, enganchando cada vez a más personas con nuestra pasión
         </aside>
     </div>    
-      
-    <footer class="principal"><p>WeRunning-Abraham Ruiz Carmona</p></footer>
+    <footer class="principal"><p>WeRunning-Abraham Ruiz Carmona</p>
+        <p>
+            <a href="https://es.wikipedia.org/wiki/Creative_Commons"><img id="cc" src="images/creative-commons.svg"></a>
+            <a href="https://es.wikipedia.org/wiki/Copyleft"><img id="cc" src="images/copyleft.svg"></a>
+        </p>
+    </footer>
 </body>
-
-
 </html>
