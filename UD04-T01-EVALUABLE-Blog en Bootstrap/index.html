@@ -11,18 +11,25 @@
 
 <body>
 
+    <div class="container-fluid">
+        
+    
     <header class="bg-primary row"><img src="images/logo.svg" class="w-25"></header>
 
     <nav class="navbar row bg-danger">
-        <ul class="row  list-unstyled row-cols-5">
-            <li id="menu"><a>Registro</a></li>
-            <li id="menu"><a>Entradas</a></li>
-            <li id="log"><a> Nueva Entrada</a></li>
-            <li id="menu"><a>Login</a></li>
-            <li id="log"><a>Registro</a></li>
+        <ul class="row list-unstyled row-cols-5 my-0">
+            <li class="text-center " id="menu"><a>Login</a></li>
+            <li class="text-center" id="log"><a>Registro</a></li>
+            <li class="text-center" id="menu"><a>Entradas</a></li>
+            <li class="text-center" id="log"><a> Nueva Entrada</a></li>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </ul>
     </nav>
 
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
