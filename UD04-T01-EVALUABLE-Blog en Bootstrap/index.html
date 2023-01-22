@@ -29,15 +29,17 @@
                 </button>
                 <div class="collapse navbar-collapse row" id="navbarSupportedContent">
                     <ul class="row list-unstyled row-cols-md-5 my-0">
-                        <li class="d-flex align-items-center" id="menu"><a>Login</a></li>
-                        <li class="d-flex align-items-center" id="log"><a>Registro</a></li>
-                        <li class="d-flex align-items-center" id="menu"><a>Entradas</a></li>
-                        <li class="d-flex align-items-center" id="log"><a> Nueva Entrada<i class="bi bi-plus"></i></a>
+                        <li class="d-flex align-items-center " id="login"><a>Login</a></li>
+                        <li class="d-flex align-items-center" id="registro"><a>Registro</a></li>
+                        <li class="d-flex align-items-center" id="entradas"><a>Entradas</a></li>
+                        <li class="d-flex align-items-center" id="nueva"><a> Nueva Entrada<i class="bi bi-plus"></i></a>
                         </li>
                         <form class="d-flex" role="search">
-                            <div class="input-group">
-                            <button title="lupa" class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button title="lupa" class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseWidthExample" aria-expanded="false"
+                                aria-controls="collapseWidthExample"><i class="bi bi-search"></i></button>
+                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                             </div>
                         </form>
                     </ul>
