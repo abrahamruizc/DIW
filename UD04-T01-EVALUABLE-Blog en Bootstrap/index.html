@@ -14,7 +14,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid sticky-top">
 
 
         <header class="bg-primary row"><img src="images/imagerunning.svg" class="w-25 mt-3 mb-3 mx-auto"></header>
@@ -35,18 +35,11 @@
                         <li class="d-flex align-items-center" id="nueva"><a> Nueva Entrada<i class="bi bi-plus"></i></a>
                         </li>
                         <form class="d-flex" role="search">
-                            <div class="input-group">
                                 <button title="lupa" class="btn btn-primary" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseWidthExample" aria-expanded="false"
                                     aria-controls="collapseWidthExample"><i class="bi bi-search"></i></button>
-                                <div class="row collapse collapse-horizontal" id="collapseWidthExample">
-                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                    <button type="button" class="btn-close collapse collapse-horizontal"
-                                        id="collapseWidthExample" aria-label="Close" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseWidthExample" aria-expanded="false"
-                                        aria-controls="collapseWidthExample"></button>
-                                </div>
-                            </div>
+                                    <input class="form-control collapse collapse-horizontal" id="collapseWidthExample" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success collapse collapse-horizontal" id="collapseWidthExample" type="submit">Search</button>
                         </form>
                     </ul>
                 </div>
@@ -64,12 +57,6 @@
                 <aside>
                     <h4>Bienvenido a tu espacio de deportes</h4>
                     <img title="banner" id="banner" class="img-fluid" src="images/banner.png">
-                    <h4>Sobre nosotros:</h4>
-                    <p>
-                    weRunning surgió del amor de cinco compañeros por el deporte, y de la necesidad de compartir un
-                    sentimiento y llevarlo más allá de cualquier frontera. Desde el día en que surgió, hemos llevado el
-                    running a todos los rincones de España, enganchando cada vez a más personas con nuestra pasión
-                    </p>
                     <h4>Síguenos en nuestras redes sociales</h4>
                     <h4>
                         <i class="bi bi-instagram"></i>
@@ -117,6 +104,45 @@
         </div>
     </div>
 
+    <footer class="card-footer position-relative bg-danger p-5">
+        <div class="row">
+            <div class="col">
+                <p class="text-decoration-underline">Dirección</p>
+                <p>Av. de la Unidad, 5, 41950 Castilleja de la Cuesta, Sevilla</p>
+            </div>
+            <div class="col">
+                <p class="text-decoration-underline">Selecciones</p>
+                <ul class="row list-unstyled ">
+                    <li class="d-flex align-items-center"><a>Login</a></li>
+                    <li class="d-flex align-items-center"><a>Registro</a></li>
+                    <li class="d-flex align-items-center"><a>Entradas</a></li>
+                    <li class="d-flex align-items-center"><a>Nueva Entrada</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <p class="text-decoration-underline">Etiquetas Relacionadas</p>
+                <ul class="row list-unstyled">
+                    <li class="d-flex align-items-center"><a>#WeRunning</a></li>
+                    <li class="d-flex align-items-center"><a>#Running</a></li>
+                    <li class="d-flex align-items-center"><a>#Carreras</a></li>
+                    <li class="d-flex align-items-center"><a>#Deporte</a></li>
+                    <li class="d-flex align-items-center"><a>#Salud</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <p class="text-decoration-underline">Categorías</p>
+                <ul class="row list-unstyled">
+                    <li class="d-flex align-items-center" id="login"><a>Eventos</a></li>
+                    <li class="d-flex align-items-center" id="registro"><a>Carreras</a></li>
+                    <li class="d-flex align-items-center" id="entradas"><a>Noticias</a></li>
+                    <li class="d-flex align-items-center" id="entradas"><a>Populares</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p class="position-absolute bottom-0 start-0">Copyright © 2023 WeRunnning</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
