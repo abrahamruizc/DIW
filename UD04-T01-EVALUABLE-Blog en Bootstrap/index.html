@@ -17,9 +17,10 @@
     <div class="container-fluid sticky-top">
 
 
-        <header class="bg-primary row"><img src="images/imagerunning.svg" class="w-25 mt-3 mb-3 mx-auto"></header>
+        <header class="row posi"><img src="images/imagerunning.svg" class="w-25 mt-3 mb-3 mx-auto">
+        <h1 class="text-end nombre">WeRunnning</h1></header>
 
-        <nav class="d-flex navbar navbar-expand-md row bg-danger">
+        <nav class="d-flex navbar navbar-expand-md rounded-2 row">
             <div class="container-fluid position-static">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,11 +30,11 @@
                 </button>
                 <div class="collapse navbar-collapse row" id="navbarSupportedContent">
                     <ul class="row list-unstyled row-cols-md-5 my-0">
-                        <li class="d-flex align-items-center " id="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><a>Login</a></li>
-                        <li class="d-flex align-items-center" id="registro"><a>Registro</a></li>
-                        <li class="d-flex align-items-center" id="entradas"><a>Entradas</a></li>
-                        <li class="d-flex align-items-center" id="nueva"><a> Nueva Entrada<i class="bi bi-plus"></i></a>
+                        <li class="d-flex align-items-center" id="entradas"><a href="index.html" class="link-primary">Entradas</a></li>
+                        <li class="d-flex align-items-center" id="nueva"><a class="link-primary"> Nueva Entrada<i class="bi bi-plus"></i></a>
                         </li>
+                        <li class="d-flex align-items-center " id="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><a class="link-primary">Login <i class="bi bi-box-arrow-in-right"></i></a></li>
+                        <li class="d-flex align-items-center" id="registro"><a href="registro.html" class="link-primary">Registro <i class="bi bi-clipboard2-plus-fill"></i></a></li>
                         <form class="d-flex" role="search">
                                 <button title="lupa" class="btn btn-primary" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseWidthExample" aria-expanded="false"
@@ -48,10 +49,23 @@
 
     </div>
 
-    <div class="container bg-info text-center">
+    <div class="container text-center rounded-2 cuerpo">
         <div class="row row-cols-3">
             <div class="col-8">
-                Column
+                <div class="position-relative migas rounded-3 mt-4 ">
+                  <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Entradas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Información</li>
+                  </ol>
+                </div>
+                <div class="entrada rounded-3">
+                  <div>
+                    <h4>Eventos</h4>
+                    <h5>Carrera Sevilla</h5>
+                    <img class="img-fluid " src="images/eventos.png" alt="">
+                  </div>
+                    <p>Evento anual en sevilla, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe expedita labore, architecto at exercitationem odit, recusandae voluptatem quasi similique, voluptatibus laboriosam officiis quisquam quaerat quis neque voluptas dolor. Ea, aperiam.</p>
+                </div>
             </div>
             <div class="col">
                 <aside>
@@ -71,22 +85,22 @@
                           <div class="carousel-item active">
                             <img src="images/principal.png" class="d-block w-100" alt="principal">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Montaña Alta</h5>
-                                <p>Corre a sobre la montaña mas alta</p>
+                                <h5 class="text-truncate">Montaña Alta</h5>
+                                <p class="text-truncate">Corre a sobre la montaña mas alta y supera tus limtes</p>
                               </div>
                           </div>
                           <div class="carousel-item">
                             <img src="images/principal2.png" class="d-block w-100" alt="principal2">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Camino Llano</h5>
-                                <p>Camino llano en el monte</p>
+                                <h5 class="text-truncate">Camino Llano</h5>
+                                <p class="text-truncate">Camino llano en el monte</p>
                               </div>
                           </div>
                           <div class="carousel-item">
                             <img src="images/principal3.png" class="d-block w-100" alt="principal3">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Carrera Anual</h5>
-                                <p>Participa en la carrera anual</p>
+                                <h5 class="text-truncate">Carrera Anual</h5>
+                                <p class="text-truncate">Participa en la carrera anual</p>
                               </div>
                           </div>
                         </div>
@@ -104,10 +118,10 @@
         </div>
     </div>
 
-    <footer class="card-footer position-relative bg-danger p-5">
+    <footer class="position-relative p-5">
         <div class="row">
             <div class="col">
-                <p class="text-decoration-underline">Dirección</p>
+                <p class="text-decoration-underline">Dirección <i class="bi bi-geo-alt"></i></p>
                 <p>Av. de la Unidad, 5, 41950 Castilleja de la Cuesta, Sevilla</p>
             </div>
             <div class="col">
@@ -171,7 +185,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-secondary bg-danger " data-bs-dismiss="modal">Cerrar</button>
           <button type="button" class="btn btn-primary">Login</button>
         </div>
       </div>
