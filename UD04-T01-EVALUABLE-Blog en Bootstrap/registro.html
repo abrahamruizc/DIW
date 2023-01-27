@@ -10,6 +10,10 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -49,7 +53,7 @@
 
     </div>
 
-    <div class="container text-center rounded-2 cuerpo">
+    <div class="container rounded-2 cuerpo">
         <div class="row row-cols-3">
             <div class="col-12 col-md-8">
                 <div class="position-relative migas rounded-3 mt-4 ">
@@ -60,70 +64,94 @@
                 </div>
                 <div class="entrada rounded-3 mb-5">
                   <div>
-                    <h4>Registro</h4>
+                    <h4 class="text-center mb-3">Registro</h4>
                     <form>
-                        <div class="mb-3">
-                          <label class="form-label">Nombre</label>
+                      <div class="row mx-auto">
+                        <div class="col">
+                          <label class="form-label">Nombre <i class="bi bi-person-fill"></i></label>
                           <input type="text" class="form-control" id="nombreinput" aria-describedby="nombre">
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Apellidos</label>
+                        <div class="col mb-3">
+                            <label class="form-label">Apellidos <i class="bi bi-person-plus-fill"></i></label>
                             <input type="text" class="form-control" id="apellidosinput" aria-describedby="nombre">
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div class="col-auto">
+                          <label class="form-label">Email <i class="bi bi-envelope-at-fill"></i></label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+                      </div>
+                      <div class="row mx-auto">
+                      
+                        <div class="col">
+                            <label class="form-label">Dirección <i class="bi bi-map-fill"></i></label>
+                            <input type="text" placeholder="C/" class="form-control" id="direccioninput" aria-describedby="direccion">
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Dirección</label>
-                            <input type="text" class="form-control" id="direccioninput" aria-describedby="direccion">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Código Postal</label>
-                            <input type="number" class="form-control" id="postalinput" aria-describedby="postal">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Comunidad Autónoma</label>
-                            <select class="form-select" name="comunidad" id="comunidad">
-                                <option></option>
-                                <option>Andalucia</option>
-                                <option>Extremadura</option>
-                                <option>Valencia</option>
-                                <option>Madrid</option>
-                              </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Provincia</label>
-                            <select class="form-select" name="Provincia" id="provincia">
-                                <option></option>
-                                <option>opcion1</option>
-                                <option>opcion2</option>
-                                <option>opcion3</option>
-                                <option>opcion4</option>
-                              </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Ciudad</label>
-                            <select class="form-select" name="ciudad" id="ciudad">
-                                <option></option>
-                                <option>opcion1</option>
-                                <option>opcion2</option>
-                                <option>opcion3</option>
-                                <option>opcion4</option>
-                              </select>
-                        </div>
-                        <!-- <div class="mb-3">
-                            <label class="form-label">Biografía</label>
-                            <textarea type="number" class="form-control" id="biografiaarea" aria-describedby="biografia">
-                        </div> -->
+                        <div class="col-auto mb-3">
+                          <label class="form-label">Código Postal <i class="bi bi-mailbox2"></i></label>
+                          <input type="number" href="#" class="form-control" id="postalinput" aria-describedby="postal" data-toggle="tooltip" 
+                          title="01 Álava	08 Barcelona	15 La Coruña	23 Jaén	30 Murcia	38 Santa Cruz de Tenerife	45 Toledo
+                          02 Albacete	09 Burgos	16 Cuenca	24 León	31 Navarra	46 Valencia
+                          03 Alicante	10 Cáceres	17 Gerona	25 Lérida	32 Orense	39 Cantabria4	47 Valladolid
+                          04 Almería	11 Cádiz	18 Granada	26 La Rioja2	33 Asturias3	40 Segovia	48 Vizcaya
+                          05 Ávila	12 Castellón	19 Guadalajara	34 Palencia	41 Sevilla	49 Zamora
+                          06 Badajoz	13 Ciudad Real	20 Guipúzcoa	27 Lugo	35 Las Palmas5	42 Soria	50 Zaragoza
+                          07 Islas Baleares1	21 Huelva	28 Madrid	36 Pontevedra	43 Tarragona	51 Ceuta
+                          14 Córdoba	22 Huesca	29 Málaga	37 Salamanca	44 Teruel	52 Melilla">
+                      </div>
+                      </div>
+
+                      <div class="row mx-auto">
+                        <div class="col-auto mb-3">
+                          <label class="form-label">Comunidad Autónoma</label>
+                          <select class="form-select" name="comunidad" id="comunidad">
+                              <option></option>
+                              <option>Andalucia</option>
+                              <option>Extremadura</option>
+                              <option>Valencia</option>
+                              <option>Madrid</option>
+                            </select>
+                      </div>
+                      <div class="col mb-3">
+                          <label class="form-label">Provincia</label>
+                          <select class="form-select" name="Provincia" id="provincia">
+                              <option></option>
+                              <option>opcion1</option>
+                              <option>opcion2</option>
+                              <option>opcion3</option>
+                              <option>opcion4</option>
+                            </select>
+                      </div>
+                      <div class="col-auto mb-3">
+                          <label class="form-label">Ciudad</label>
+                          <select class="form-select" name="ciudad" id="ciudad">
+                              <option></option>
+                              <option>opcion1</option>
+                              <option>opcion2</option>
+                              <option>opcion3</option>
+                              <option>opcion4</option>
+                            </select>
+                      </div>
+                      </div>
                         
+                      
+                        <div class="mx-3 mb-3">
+                            <label class="form-label">Biografía <i class="bi bi-vector-pen"></i></label>
+                            <textarea class="form-control" cols="30" rows="10"></textarea>
+                        </div> 
+                        
+                        <div class="mx-3">
                         <label for="basic-url" class="form-label">Instagram</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-5">
                         <span class="input-group-text" id="basic-addon3">https://instagram.com/</span>
                         <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                         </div>
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        <div class="row">
+                        <p class="text-center col"><button type="submit" class="btn btn-primary">Enviar</button> 
+                          
+                        </p>
+                        <p class="text-center col"><button class="btn btn-danger">Cancelar</button></p>
+                      </div>
                       </form>
                   </div>
                     
@@ -132,10 +160,10 @@
             </div>
             <div class="col-12 col-md-4 mt-4">
                 <aside>
-                    <h4>Bienvenido a tu espacio de deportes</h4>
+                    <h4 class="text-center">Bienvenido a tu espacio de deportes</h4>
                     <img title="banner" id="banner" class="img-fluid" src="images/banner.png">
-                    <h4>Síguenos en nuestras redes sociales</h4>
-                    <h4>
+                    <h4 class="text-center">Síguenos en nuestras redes sociales</h4>
+                    <h4 class="text-center">
                         <i class="bi bi-instagram"></i>
                         <i class="bi bi-facebook"></i>
                         <i class="bi bi-tiktok"></i>
@@ -243,7 +271,7 @@
                 </label>
               </div>
             
-            <div class="form-group"><a>Recuperar Contraseña <i class="bi bi-box-arrow-up-right"></i></a></div>
+            <div class="form-group"><a class="link-primary">Recuperar Contraseña <i class="bi bi-box-arrow-up-right"></i></a></div>
             
           </form>
         </div>
@@ -254,11 +282,13 @@
       </div>
     </div>
   </div>
-
+  
+  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+        
 </body>
 
 </html>
