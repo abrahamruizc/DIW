@@ -14,11 +14,13 @@
 
 <body>
 
-  <div>
-    <video class="w-100">
+  <div class="position-relative collapse show" id="collapsevideo" >
+    <video autoplay loop class="w-100" >
       <source type="video/mp4" src="video/video.mp4">
     </video>
-    <button class="btn btn-danger">Cerrar</button>
+    <button class="btn btn-danger m-3 position-absolute bottom-50 start-50 translate-middle-x" data-bs-toggle="collapse"
+    data-bs-target="#collapsevideo" aria-expanded="false"
+    aria-controls="collapsevideo">Cerrar</button>
   </div>
 
     <div class="container-fluid sticky-top">
