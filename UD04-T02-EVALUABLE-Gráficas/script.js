@@ -146,7 +146,7 @@ function graficoLineasHorizontales(){
   const ctx = document.getElementById('horizontal');
 
   new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
       labels: ['Evento Sevilla', 'Evento Cordoba', 'Evento Huelva', 'Evento Castilleja', 'Evento Espartinas', 'Evento Olivares'],
       datasets: [{
