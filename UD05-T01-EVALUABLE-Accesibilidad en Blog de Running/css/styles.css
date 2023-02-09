@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    
+}
+
+nav{
+    background-color: rgb(255, 115, 115);
+    border-top: 1px solid rgb(156, 146, 146);
+    border-bottom: 1px solid rgb(156, 146, 146);
+}
+
+footer{
+    background-color: rgb(255, 115, 115);
+    border-top: 1px solid rgb(156, 146, 146);
+    border-bottom: 1px solid rgb(156, 146, 146);
+}
+
+.cuerpo{
+    background-color: rgb(198, 218, 255);
+}
+
+.nombre{
+    color: rgb(255, 72, 72);
+}
+
+.migas{
+    background-color: rgb(164, 196, 255);
+}
+
+.entrada{
+    background-color: rgb(164, 196, 255);
+}
