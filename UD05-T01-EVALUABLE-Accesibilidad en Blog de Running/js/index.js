@@ -1,11 +1,5 @@
 window.onload = inicio;
 
-
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
-
-
 function inicio() {
 let boton = document.getElementById("tema");
 boton.addEventListener("click", tema);
@@ -35,4 +29,4 @@ function tema() {
   }
   
 }
-        
+            
