@@ -29,7 +29,13 @@ footer{
 }
 
 .navoscuro{
-    background-color: rgb(253, 52, 52);
-    border-top: 1px solid rgb(156, 146, 146);
-    border-bottom: 1px solid rgb(156, 146, 146);
+    background-color: rgb(255, 72, 72);
+    border-top: 1px solid rgb(255, 72, 72);
+    border-bottom: 1px solid rgb(255, 72, 72);
+}
+
+.footeroscuro{
+    background-color: rgb(255, 72, 72);
+    border-top: 1px solid rgb(255, 72, 72);
+    border-bottom: 1px solid rgb(255, 72, 72);
 }
