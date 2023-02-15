@@ -38,7 +38,7 @@
 
       <nav class="d-flex navbar navbar-expand-md rounded-2 row ">
         <div class="container-fluid position-static">
-          <button id="tema" class="btn rounded-fill"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
+          <button aria-label="boton para modo oscuro y claro" id="tema" class="btn rounded-fill"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
           <a class="navbar-brand" href="#"></a>
           <button
             class="navbar-toggler"
@@ -54,10 +54,10 @@
           <div class="collapse navbar-collapse row" id="navbarSupportedContent">
             <div class="row list-unstyled row-cols-md-5 my-0">
               <div class="d-flex align-items-center" id="entradas">
-                <a id="a" href="index.html" class="link-primary">Entradas</a>
+                <a id="a" href="index.html" class="link-dark">Entradas</a>
               </div>
               <div  class="d-flex align-items-center" id="nueva">
-                <a href="#" class="link-primary">
+                <a href="#" class="link-dark">
                   Nueva Entrada<i class="bi bi-plus"></i
                 ></a>
               </div>
@@ -67,12 +67,12 @@
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
               >
-                <a href="#" class="link-primary"
+                <a href="#" class="link-dark"
                   >Login <i class="bi bi-box-arrow-in-right"></i
                 ></a>
               </div>
               <div class="d-flex align-items-center" id="registro">
-                <a href="registro.html" class="link-primary"
+                <a href="registro.html" class="link-dark"
                   >Registro <i class="bi bi-clipboard2-plus-fill"></i
                 ></a>
               </div>
@@ -109,22 +109,22 @@
       </nav>
     </div>
 
-    <div class="container text-center rounded-2 cuerpo">
+    <div id="contenido" class="container text-center rounded-2 cuerpo">
       <div class="row row-cols-3">
         <div class="col-12 col-md-8">
-          <div class="position-relative migas rounded-3 mt-4">
+          <div id="migapan" class="position-relative migas rounded-3 mt-4">
             <ol
               class="breadcrumb"
               style="--bs-breadcrumb-divider: '>'"
               aria-label="breadcrumb"
             >
-              <li class="breadcrumb-item"><a href="index.html">Entradas</a></li>
+              <li class="breadcrumb-item"><a id="migalink" class="link-primary" href="index.html">Entradas</a></li>
               <li class="breadcrumb-item active" aria-current="page">
                 Información
               </li>
             </ol>
           </div>
-          <div class="entrada rounded-3 mb-5">
+          <div id="eventos" class="entrada rounded-3 mb-5">
             <div>
               <h4>Eventos</h4>
               <h5>Carrera Sevilla</h5>
@@ -146,7 +146,7 @@
             <i title="likes 20" class="bi bi-hand-thumbs-up-fill"></i>:20
             <i title="dislikes 0" class="bi bi-hand-thumbs-down-fill text-end"></i>:0
           </div>
-          <div class="entrada rounded-3 mb-5">
+          <div id="carreras" class="entrada rounded-3 mb-5">
             <div>
               <h4>Carreras</h4>
               <h5>Carrera benefica</h5>
@@ -168,7 +168,7 @@
             <i title="likes 25" class="bi bi-hand-thumbs-up-fill"></i>:25
             <i title="dislikes 1" class="bi bi-hand-thumbs-down-fill text-end"></i>:1
           </div>
-          <div class="entrada rounded-3 mb-5">
+          <div id="noticias" class="entrada rounded-3 mb-5">
             <div>
               <h4>Noticia</h4>
               <h5>atleta Nº771</h5>
@@ -190,7 +190,7 @@
             <i title="likes 0" class="bi bi-hand-thumbs-up-fill"></i>:0
             <i title="dislikes 0" class="bi bi-hand-thumbs-down-fill text-end"></i>:0
           </div>
-          <div class="entrada rounded-3 mb-5">
+          <div id="populares" class="entrada rounded-3 mb-5">
             <div>
               <h4>Popular</h4>
               <h5>Maraton</h5>
@@ -244,10 +244,10 @@
                     alt="primera imagen del carrusel"
                   />
                   <div class="carousel-caption">
-                    <h5 class="text-truncate">Montaña Alta</h5>
-                    <p class="text-truncate">
+                    <h5 class="text-truncate bg-dark">Montaña Alta</h5>
+                    <h6 class="text-truncate bg-dark">
                       Corre sobre la montaña mas alta y supera tus limtes
-                    </p>
+                    </h6>
                   </div>
                 </div>
                 <div class="carousel-item">
@@ -257,8 +257,8 @@
                     alt="segunda imagen del carrusel"
                   />
                   <div class="carousel-caption">
-                    <h5 class="text-truncate">Camino Llano</h5>
-                    <p class="text-truncate">Camino llano en el monte</p>
+                    <h5 class="text-truncate bg-dark">Camino Llano</h5>
+                    <h6 class="text-truncate bg-dark">Camino llano en el monte</h6>
                   </div>
                 </div>
                 <div class="carousel-item">
@@ -268,8 +268,8 @@
                     alt="tercera imagen del carrusel"
                   />
                   <div class="carousel-caption">
-                    <h5 class="text-truncate">Carrera Anual</h5>
-                    <p class="text-truncate">Participa en la carrera anual</p>
+                    <h5 class="text-truncate bg-dark">Carrera Anual</h5>
+                    <h6 class="text-truncate bg-dark">Participa en la carrera anual</h6>
                   </div>
                 </div>
               </div>

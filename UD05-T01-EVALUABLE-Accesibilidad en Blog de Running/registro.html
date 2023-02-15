@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeRunnning</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
@@ -23,9 +18,9 @@
   </head>
 
   <body>
-    <div class="container-fluid sticky-top">
+    <div class="container-fluid sticky-top text-body bg-body">
       <header class="row posi">
-        <img
+        <img id="logowe"
           src="images/imagerunning.svg"
           alt="logo de werruning"
           class="w-25 mt-3 mb-3 mx-auto"
@@ -35,6 +30,7 @@
 
       <nav class="d-flex navbar navbar-expand-md rounded-2 row">
         <div class="container-fluid position-static">
+          <button aria-label="boton para modo oscuro y claro" id="tema" class="btn rounded-fill"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
           <a class="navbar-brand" href="#"></a>
           <button
             class="navbar-toggler"
@@ -50,10 +46,10 @@
           <div class="collapse navbar-collapse row" id="navbarSupportedContent">
             <div class="row list-unstyled row-cols-md-5 my-0">
               <div class="d-flex align-items-center" id="entradas">
-                <a href="index.html" class="link-primary">Entradas</a>
+                <a href="index.html" class="link-dark">Entradas</a>
               </div>
               <div class="d-flex align-items-center" id="nueva">
-                <a class="link-primary">
+                <a href="#" class="link-dark">
                   Nueva Entrada<i class="bi bi-plus"></i
                 ></a>
               </div>
@@ -63,12 +59,12 @@
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
               >
-                <a class="link-primary"
+                <a href="#" class="link-dark"
                   >Login <i class="bi bi-box-arrow-in-right"></i
                 ></a>
               </div>
               <div class="d-flex align-items-center" id="registro">
-                <a href="registro.html" class="link-primary"
+                <a href="registro.html" class="link-dark"
                   >Registro <i class="bi bi-clipboard2-plus-fill"></i
                 ></a>
               </div>
@@ -105,16 +101,16 @@
     </div>
 
     <div class="container rounded-2 cuerpo">
-      <div class="row row-cols-3">
+      <div id="contenido" class="row row-cols-3">
         <div class="col-12 col-md-8">
-          <div class="position-relative migas rounded-3 mt-4">
+          <div id="migapan" class="position-relative migas rounded-3 mt-4">
             <ol
               class="breadcrumb"
               style="--bs-breadcrumb-divider: '>'"
               aria-label="breadcrumb"
             >
               <li class="breadcrumb-item">
-                <a href="registro.html">Registro</a>
+                <a id="migalink" href="registro.html">Registro</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Formulario
@@ -122,7 +118,7 @@
             </ol>
           </div>
           <div class="entrada rounded-3 mb-5">
-            <div>
+            <div id="registros">
               <h4 class="text-center mb-3">Registro</h4>
               <form>
                 <div class="row mx-auto">
@@ -134,7 +130,7 @@
                       type="text"
                       class="form-control"
                       id="nombreinput"
-                      aria-describedby="nombre"
+                      aria-label="nombre"
                     />
                   </div>
                   <div class="col mb-3">
@@ -145,7 +141,7 @@
                       type="text"
                       class="form-control"
                       id="apellidosinput"
-                      aria-describedby="apellidos"
+                      aria-label="apellidos"
                     />
                   </div>
                   <div class="col-auto">
@@ -156,7 +152,7 @@
                       type="email"
                       class="form-control"
                       id="exampleInputEmail1"
-                      aria-describedby="email"
+                      aria-label="email"
                     />
                   </div>
                 </div>
@@ -170,7 +166,7 @@
                       placeholder="C/"
                       class="form-control"
                       id="direccioninput"
-                      aria-describedby="direccion"
+                      aria-label="direccion"
                     />
                   </div>
                   <div class="col-auto mb-3">
@@ -181,16 +177,9 @@
                       type="number"
                       class="form-control"
                       id="postalinput"
-                      aria-describedby="postal"
+                      aria-label="postal"
                       data-toggle="tooltip"
-                      title="01 Álava	08 Barcelona	15 La Coruña	23 Jaén	30 Murcia	38 Santa Cruz de Tenerife	45 Toledo
-                          02 Albacete	09 Burgos	16 Cuenca	24 León	31 Navarra	46 Valencia
-                          03 Alicante	10 Cáceres	17 Gerona	25 Lérida	32 Orense	39 Cantabria4	47 Valladolid
-                          04 Almería	11 Cádiz	18 Granada	26 La Rioja2	33 Asturias3	40 Segovia	48 Vizcaya
-                          05 Ávila	12 Castellón	19 Guadalajara	34 Palencia	41 Sevilla	49 Zamora
-                          06 Badajoz	13 Ciudad Real	20 Guipúzcoa	27 Lugo	35 Las Palmas5	42 Soria	50 Zaragoza
-                          07 Islas Baleares1	21 Huelva	28 Madrid	36 Pontevedra	43 Tarragona	51 Ceuta
-                          14 Córdoba	22 Huesca	29 Málaga	37 Salamanca	44 Teruel	52 Melilla"
+                      title="Introduce una serie de 5 numeros ejemplo 41807"
                     />
                   </div>
                 </div>
@@ -198,7 +187,7 @@
                 <div class="row mx-auto">
                   <div class="col-auto mb-3">
                     <label class="form-label">Comunidad Autónoma</label>
-                    <select class="form-select" name="comunidad" id="comunidad">
+                    <select aria-label="Comunidad Autónoma" class="form-select" name="comunidad" id="comunidad">
                       <option>Selecciona una comunidad</option>
                       <option>Andalucia</option>
                       <option>Extremadura</option>
@@ -208,7 +197,7 @@
                   </div>
                   <div class="col mb-3">
                     <label class="form-label">Provincia</label>
-                    <select class="form-select" name="Provincia" id="provincia">
+                    <select aria-label="Provincia" class="form-select" name="Provincia" id="provincia">
                       <option>Selecciona una provincia</option>
                       <option>opcion1</option>
                       <option>opcion2</option>
@@ -218,7 +207,7 @@
                   </div>
                   <div class="col-auto mb-3">
                     <label class="form-label">Ciudad</label>
-                    <select class="form-select" name="ciudad" id="ciudad">
+                    <select aria-label="Ciudad" class="form-select" name="ciudad" id="ciudad">
                       <option>Selecciona una ciudad</option>
                       <option>opcion1</option>
                       <option>opcion2</option>
@@ -232,7 +221,7 @@
                   <label class="form-label"
                     >Biografía <i class="bi bi-vector-pen"></i
                   ></label>
-                  <textarea class="form-control" cols="30" rows="10"></textarea>
+                  <textarea aria-label="biografia" class="form-control" cols="30" rows="10"></textarea>
                 </div>
 
                 <div class="mx-3">
@@ -245,7 +234,7 @@
                       type="text"
                       class="form-control"
                       id="basic-url"
-                      aria-describedby="basic-addon3"
+                      aria-label="Introduce instagram"
                     />
                   </div>
                 </div>
@@ -275,10 +264,10 @@
             />
             <h4 class="text-center">Síguenos en nuestras redes sociales</h4>
             <div class="text-center">
-              <i class="bi bi-instagram fs-4"></i>
-              <i class="bi bi-facebook fs-4"></i>
-              <i class="bi bi-tiktok fs-4"></i>
-              <i class="bi bi-youtube fs-4"></i>
+              <i title="Instagram de werruning" class="bi bi-instagram fs-4"></i>
+              <i title="facebook de werruning" class="bi bi-facebook fs-4"></i>
+              <i title="tiktok de werruning" class="bi bi-tiktok fs-4"></i>
+              <i title="youtube de werruning" class="bi bi-youtube fs-4"></i>
             </div>
           </aside>
           <aside>
@@ -295,10 +284,10 @@
                     alt="primera imagen del carrusel"
                   />
                   <div class="carousel-caption">
-                    <h5 class="text-truncate">Montaña Alta</h5>
-                    <p class="text-truncate">
+                    <h5 class="text-truncate bg-dark">Montaña Alta</h5>
+                    <h6 class="text-truncate bg-dark">
                       Corre a sobre la montaña mas alta y supera tus limtes
-                    </p>
+                    </h6>
                   </div>
                 </div>
                 <div class="carousel-item">
@@ -308,8 +297,8 @@
                     alt="segunda imagen del carrusel"
                   />
                   <div class="carousel-caption">
-                    <h5 class="text-truncate">Camino Llano</h5>
-                    <p class="text-truncate">Camino llano en el monte</p>
+                    <h5 class="text-truncate bg-dark">Camino Llano</h5>
+                    <h6 class="text-truncate bg-dark">Camino llano en el monte</h6>
                   </div>
                 </div>
                 <div class="carousel-item">
@@ -319,8 +308,8 @@
                     alt="tercera imagen del carrusel"
                   />
                   <div class="carousel-caption">
-                    <h5 class="text-truncate">Carrera Anual</h5>
-                    <p class="text-truncate">Participa en la carrera anual</p>
+                    <h5 class="text-truncate bg-dark">Carrera Anual</h5>
+                    <h6 class="text-truncate bg-dark">Participa en la carrera anual</h6>
                   </div>
                 </div>
               </div>
